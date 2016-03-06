@@ -17,11 +17,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    //MBProgressHUD分类
     [MBProgressHUD showCustomLoading:@"加载图片" name:@"page_loading_" imageNum:39];
     
     [MBProgressHUD show:@"加载图片" icon:nil view:self.view];
     
     [MBProgressHUD showHint:@"加载有偏移量" yOffset:50.f xOffset:50.f];
+    
+    //UIViewController分类方法
+    [self showHudInView:self.view hint:@"加载控制器view"];
+    
     
 }
 
