@@ -105,10 +105,13 @@
 #pragma mark 隐藏提示
 +(void)hideHUDForView:(UIView *)view
 {
+    if (view == nil) view = [UIApplication sharedApplication].keyWindow;
+
     [self hideHUDForView:view animated:YES];
 }
 +(void)hideHUD
 {
+    
     [self hideHUDForView:nil];
 }
 @end
